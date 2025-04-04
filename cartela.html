@@ -19,45 +19,69 @@
         </thead>
         <tbody>
             <tr>
-                <td id="b1">12</td>
-                <td id="i1">30</td>
-                <td id="n1">33</td>
-                <td id="g1">51</td>
-                <td id="o1">69</td>
+                <td id="b1" onclick="MarcarCartela(this)">12</td><!--Este td (this)-->
+                <td id="i1" onclick="MarcarCartela(this)">30</td>
+                <td id="n1" onclick="MarcarCartela(this)">33</td>
+                <td id="g1" onclick="MarcarCartela(this)">51</td>
+                <td id="o1" onclick="MarcarCartela(this)">69</td>
             </tr>
             <tr>
-                <td id="b2">9</td>
-                <td id="i2">24</td>
-                <td id="n2">45</td>
-                <td id="g2">59</td>
-                <td id="o2">75</td>
+                <td id="b2" onclick="MarcarCartela(this)">9</td>
+                <td id="i2" onclick="MarcarCartela(this)">24</td>
+                <td id="n2" onclick="MarcarCartela(this)">45</td>
+                <td id="g2" onclick="MarcarCartela(this)">59</td>
+                <td id="o2" onclick="MarcarCartela(this)">75</td>
             </tr>
             <tr>
-                <td id="b3">13</td>
-                <td id="i3">22</td>
-                <td id="n3"><3</td>
-                <td id="g3">47</td>
-                <td id="o3">64</td>
+                <td id="b3" onclick="MarcarCartela(this)">13</td>
+                <td id="i3" onclick="MarcarCartela(this)">22</td>
+                <td id="n3" onclick="MarcarCartela(this)">31</td>
+                <td id="g3" onclick="MarcarCartela(this)">47</td>
+                <td id="o3" onclick="MarcarCartela(this)">64</td>
             </tr>
             <tr>
-                <td id="b4">1</td>
-                <td id="i4">16</td>
-                <td id="n4">34</td>
-                <td id="g4">49</td>
-                <td id="o4">71</td>
+                <td id="b4" onclick="MarcarCartela(this)">1</td>
+                <td id="i4" onclick="MarcarCartela(this)">16</td>
+                <td id="n4" onclick="MarcarCartela(this)">34</td>
+                <td id="g4" onclick="MarcarCartela(this)">49</td>
+                <td id="o4" onclick="MarcarCartela(this)">71</td>
             </tr>
             <tr>
-                <td id="b5">5</td>
-                <td id="i5">19</td>
-                <td id="n5">32</td>
-                <td id="g5">52</td>
-                <td id="o5">70</td>
+                <td id="b5" onclick="MarcarCartela(this)">5</td>
+                <td id="i5" onclick="MarcarCartela(this)">19</td>
+                <td id="n5" onclick="MarcarCartela(this)">32</td>
+                <td id="g5" onclick="MarcarCartela(this)">52</td>
+                <td id="o5" onclick="MarcarCartela(this)">70</td>
             </tr>
         </tbody>
     </table>
-
+    <br />
+    <button id="botao" onclick="Piscar()">
+        Piscando o botão
+    </button>
     <script>
-
+        function Piscar()/*Função para acontecer algo*/
+        {
+            var botao = document.getElementById("botao");/*Pegar o elemento por id*/
+            /*alert(botao.innerText); Alerta, innerText serve para acessar o atributo do botao*/
+           
+            if(botao.style.backgroundColor=='red'){
+                botao.style.backgroundColor='blue';
+            }else{
+                botao.style.backgroundColor='red'; 
+            }
+            /*alert(botao.style.backgroundColor);*/
+        }
+        
+        function MarcarCartela(td){
+            if(td.style.backgroundColor !='black'){
+                td.style.backgroundColor ='black';
+                td.style.color='white';
+            }else{
+                td.style.backgroundColor ='';
+                td.style.color='black';
+            }
+        }
     </script>
 </body>
 </html>
