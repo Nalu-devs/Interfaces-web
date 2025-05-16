@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bingo.css" rel="stylesheet">
     <title>Bingo</title>
 </head>
+
 <body>
     <table class="tabela">
         <thead>
@@ -55,49 +57,173 @@
             </tr>
         </tbody>
     </table>
+    <table>
+        <tr>
+            <td onclick="numeroSorteado (this)">1</td>
+            <td onclick="numeroSorteado (this)">2</td>
+            <td onclick="numeroSorteado (this)">3</td>
+            <td onclick="numeroSorteado (this)">4</td>
+            <td onclick="numeroSorteado (this)">5</td>
+            <td onclick="numeroSorteado (this)">6</td>
+            <td onclick="numeroSorteado (this)">7</td>
+            <td onclick="numeroSorteado (this)">8</td>
+            <td onclick="numeroSorteado (this)">9</td>
+            <td onclick="numeroSorteado (this)">10</td>
+            <td onclick="numeroSorteado (this)">11</td>
+            <td onclick="numeroSorteado (this)">12</td>
+            <td onclick="numeroSorteado (this)">13</td>
+            <td onclick="numeroSorteado (this)">14</td>
+            <td onclick="numeroSorteado (this)">15</td>
+        </tr>
+        <tr>
+            <td onclick="numeroSorteado(this)">16</td>
+            <td onclick="numeroSorteado(this)">17</td>
+            <td onclick="numeroSorteado(this)">18</td>
+            <td onclick="numeroSorteado(this)">19</td>
+            <td onclick="numeroSorteado(this)">20</td>
+            <td onclick="numeroSorteado(this)">21</td>
+            <td onclick="numeroSorteado(this)">22</td>
+            <td onclick="numeroSorteado(this)">23</td>
+            <td onclick="numeroSorteado(this)">24</td>
+            <td onclick="numeroSorteado(this)">25</td>
+            <td onclick="numeroSorteado(this)">26</td>
+            <td onclick="numeroSorteado(this)">27</td>
+            <td onclick="numeroSorteado(this)">28</td>
+            <td onclick="numeroSorteado(this)">29</td>
+            <td onclick="numeroSorteado(this)">30</td>
+        </tr>
+        <tr>
+            <td onclick="numeroSorteado(this)">31</td>
+            <td onclick="numeroSorteado(this)">32</td>
+            <td onclick="numeroSorteado(this)">33</td>
+            <td onclick="numeroSorteado(this)">34</td>
+            <td onclick="numeroSorteado(this)">35</td>
+            <td onclick="numeroSorteado(this)">36</td>
+            <td onclick="numeroSorteado(this)">37</td>
+            <td onclick="numeroSorteado(this)">38</td>
+            <td onclick="numeroSorteado(this)">39</td>
+            <td onclick="numeroSorteado(this)">40</td>
+            <td onclick="numeroSorteado(this)">41</td>
+            <td onclick="numeroSorteado(this)">42</td>
+            <td onclick="numeroSorteado(this)">43</td>
+            <td onclick="numeroSorteado(this)">44</td>
+            <td onclick="numeroSorteado(this)">45</td>
+        </tr>
+        <tr>
+            <td onclick="numeroSorteado(this)">46</td>
+            <td onclick="numeroSorteado(this)">47</td>
+            <td onclick="numeroSorteado(this)">48</td>
+            <td onclick="numeroSorteado(this)">49</td>
+            <td onclick="numeroSorteado(this)">50</td>
+            <td onclick="numeroSorteado(this)">51</td>
+            <td onclick="numeroSorteado(this)">52</td>
+            <td onclick="numeroSorteado(this)">53</td>
+            <td onclick="numeroSorteado(this)">54</td>
+            <td onclick="numeroSorteado(this)">55</td>
+            <td onclick="numeroSorteado(this)">56</td>
+            <td onclick="numeroSorteado(this)">57</td>
+            <td onclick="numeroSorteado(this)">58</td>
+            <td onclick="numeroSorteado(this)">59</td>
+            <td onclick="numeroSorteado(this)">60</td>
+        </tr>
+        <tr>
+            <td onclick="numeroSorteado(this)">61</td>
+            <td onclick="numeroSorteado(this)">62</td>
+            <td onclick="numeroSorteado(this)">63</td>
+            <td onclick="numeroSorteado(this)">64</td>
+            <td onclick="numeroSorteado(this)">65</td>
+            <td onclick="numeroSorteado(this)">66</td>
+            <td onclick="numeroSorteado(this)">67</td>
+            <td onclick="numeroSorteado(this)">68</td>
+            <td onclick="numeroSorteado(this)">69</td>
+            <td onclick="numeroSorteado(this)">70</td>
+            <td onclick="numeroSorteado(this)">71</td>
+            <td onclick="numeroSorteado(this)">72</td>
+            <td onclick="numeroSorteado(this)">73</td>
+            <td onclick="numeroSorteado(this)">74</td>
+            <td onclick="numeroSorteado(this)">75</td>
+        </tr>
+    </table>
     <button onclick="GerarCartela()">
         Gerar Cartela
     </button>
+    <button onclick="numeroSorteado()">
+        Sortear
+    </button>
     <script>
-        function GerarCartela(){
-            vetorB=GerarVetor(1,15)
-            vetorI=GerarVetor(16,30)
-            vetorN=GerarVetor(31,45)
-            vetorG=GerarVetor(46,60)
-            vetorO=GerarVetor(61,75)
-            for (i=0; i<5; i++){
-                var td = document.getElementById("b"+(i+1))
-                td.innerText=vetorB[i]
-
-                td = document.getElementById("i"+(i+1))
-                td.innerText=vetorI[i]
-
-                td = document.getElementById("n"+(i+1))
-                td.innerText=vetorN[i]
-
-                td = document.getElementById("g"+(i+1))
-                td.innerText=vetorG[i]
-
-                td = document.getElementById("o"+(i+1))
-                td.innerText=vetorO[i]
+         function numeroSorteado(td) {
+            if (td.style.backgroundColor != 'black') {
+                td.style.backgroundColor = 'black';
+                td.style.color = 'white';
+            } else {
+                td.style.backgroundColor = '';
+                td.style.color = 'black';
             }
         }
-        function GerarVetor(numeroInicial, numeroFinal){
+        
+        function GerarCartela() {
+            vetorB = misturarArray(GerarVetor(1, 15))
+            vetorI = misturarArray(GerarVetor(16, 30))
+            vetorN = misturarArray(GerarVetor(31, 45))
+            vetorG = misturarArray(GerarVetor(46, 60))
+            vetorO = misturarArray(GerarVetor(61, 75))
+            for (i = 0; i < 5; i++) {
+                var td = document.getElementById("b" + (i + 1))
+                td.innerText = vetorB[i]
+
+                td = document.getElementById("i" + (i + 1))
+                td.innerText = vetorI[i]
+
+                td = document.getElementById("n" + (i + 1))
+                td.innerText = vetorN[i]
+
+                td = document.getElementById("g" + (i + 1))
+                td.innerText = vetorG[i]
+
+                td = document.getElementById("o" + (i + 1))
+                td.innerText = vetorO[i]
+            }
+        }
+        function GerarVetor(numeroInicial, numeroFinal) {
             vetor = []
-            for(i=numeroInicial;i<=numeroFinal;i++){
+            for (i = numeroInicial; i <= numeroFinal; i++) {
                 vetor.push(i)
             }
             return vetor
         }
-        function MarcarCartela(td){
-            if(td.style.backgroundColor !='black'){
-                td.style.backgroundColor ='black';
-                td.style.color='white';
-            }else{
-                td.style.backgroundColor ='';
-                td.style.color='black';
+        function MarcarCartela(td) {
+            if (td.style.backgroundColor != 'black') {
+                td.style.backgroundColor = 'black';
+                td.style.color = 'white';
+            } else {
+                td.style.backgroundColor = '';
+                td.style.color = 'black';
             }
         }
+        function numeroAleatorio(numeroMinimo, numeroMaximo) {//declara o numero minimo e maximo
+            var retorno = Math.floor(Math.random() * numeroMaximo)//math é uma biblioteca que cuida do que é matematica, o floor arredonda o numero, radom é aleatorio
+            if (retorno > 0 && retorno >= numeroMinimo && retorno <= numeroMaximo)//declara que o retorno tem que ser maior que 0 e tem que ser maior ou igual o numero minimo e menor ou igual ao numero maximo
+            {
+                return retorno
+            }
+            else {
+                return numeroAleatorio(numeroMinimo, numeroMaximo)
+            }
+        }
+        function misturarArray(array) {
+            var aleatorio
+            var cont = array.length//quantidade dentro do array de 0 a 14
+            var auxiliar
+            while (cont != 0) {
+                aleatorio = numeroAleatorio(1, array.length)
+                cont--
+                auxiliar = array[cont]//recebe o valor do array de length por exemplo o array 14 é o 15 
+                array[cont] = array[aleatorio] //troca o cont de 14 para outro
+                array[aleatorio] = auxiliar //pega o auxiliar e coloca onde ficou
+            }
+            return array
+        }//array 1 a 75, colocar oq tem em td no botao
     </script>
 </body>
+
 </html>
