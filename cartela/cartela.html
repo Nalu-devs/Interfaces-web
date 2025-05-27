@@ -215,8 +215,8 @@
     var numerosorteado = sorteio.shift() // Pega o primeiro e remove do array embaralhado
     // Faz o número que foi sorteado aparecer na tela com formatação H1
     document.getElementById("display").innerHTML = "<h1>Número sorteado: " + numerosorteado + "</h1>"
-
-    
+    // Pega o elemento TD correspondente ao número sorteado na tabela grande
+    var numeroTabela = document.getElementById(numerosorteado)
 }
 
     function GerarCartela() {
