@@ -1,4 +1,5 @@
-body, html{
+body,
+html {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #d8f3dc;
     margin: 0;
@@ -7,51 +8,61 @@ body, html{
     align-items: center;
     height: 100%;
 }
-.cartela{
+
+.cartela {
     background-color: #edede9;
     border: 4px solid #000000;
     border-radius: 5%;
     font-size: 50px;
-    padding:5px 8px;
+    padding: 5px 8px;
     margin: 0 auto;
     margin-top: 5%;
 }
-td{
-    border:1px solid #000;
+
+td {
+    border: 1px solid #000;
     border-radius: 5%;
     text-align: center;
-    padding:5px 8px;
+    padding: 5px 8px;
     cursor: pointer;
 }
-.b{
+
+.b {
     color: #ffbe0b;
     -webkit-text-stroke-color: #000;
     -webkit-text-stroke-width: 2px;
 }
 
-.i{
+.i {
     color: #fb5607;
     -webkit-text-stroke-color: #000;
     -webkit-text-stroke-width: 2px;
 }
-.n{
+
+.n {
     color: #ff006e;
     -webkit-text-stroke-color: #000;
     -webkit-text-stroke-width: 2px;
 }
-.g{
+
+.g {
     color: #8338ec;
     -webkit-text-stroke-color: #000;
     -webkit-text-stroke-width: 2px;
 }
-.o{
+
+.o {
     color: #3a86ff;
     -webkit-text-stroke-color: #000;
     -webkit-text-stroke-width: 2px;
 }
 
-img{
+img {
     margin-top: 10px;
     width: 40px;
     height: 40px;
+}
+
+button .gerarCartela {
+    margin: 0 auto;
 }
