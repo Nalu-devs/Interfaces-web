@@ -3,7 +3,6 @@ body, html{
     background-color: #d8f3dc;
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -14,6 +13,8 @@ body, html{
     border-radius: 5%;
     font-size: 50px;
     padding:5px 8px;
+    margin: 0 auto;
+    margin-top: 5%;
 }
 td{
     border:1px solid #000;
@@ -25,25 +26,32 @@ td{
 .b{
     color: #ffbe0b;
     -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
 }
+
 .i{
     color: #fb5607;
     -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
 }
 .n{
     color: #ff006e;
     -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
 }
 .g{
     color: #8338ec;
     -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
 }
 .o{
     color: #3a86ff;
     -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
+}
+
+img{
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
 }

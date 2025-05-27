@@ -9,6 +9,9 @@
 </head>
 
 <body>
+  <button onclick="GerarCartela()">
+    Gerar Cartela
+  </button>
   <table class="cartela">
     <thead>
       <tr>
@@ -23,37 +26,37 @@
       <tr>
         <td id="b1" onclick="MarcarCartelaB(this)"> 12 </td><!--B-->
         <td id="i1" onclick="MarcarCartelaI(this)">30</td><!--I-->
-        <td id="n1" onclick="MarcarCartela(this)">33</td><!--N-->
-        <td id="g1" onclick="MarcarCartela(this)">51</td><!--G-->
-        <td id="o1" onclick="MarcarCartela(this)">69</td><!--O-->
+        <td id="n1" onclick="MarcarCartelaN(this)">33</td><!--N-->
+        <td id="g1" onclick="MarcarCartelaG(this)">51</td><!--G-->
+        <td id="o1" onclick="MarcarCartelaO(this)">69</td><!--O-->
       </tr>
       <tr>
         <td id="b2" onclick="MarcarCartelaB(this)">9</td> <!--B-->
         <td id="i2" onclick="MarcarCartelaI(this)">24</td><!--I-->
-        <td id="n2" onclick="MarcarCartela(this)">45</td><!--N-->
-        <td id="g2" onclick="MarcarCartela(this)">59</td><!--G-->
-        <td id="o2" onclick="MarcarCartela(this)">75</td><!--O-->
+        <td id="n2" onclick="MarcarCartelaN(this)">45</td><!--N-->
+        <td id="g2" onclick="MarcarCartelaG(this)">59</td><!--G-->
+        <td id="o2" onclick="MarcarCartelaO(this)">75</td><!--O-->
       </tr>
       <tr>
         <td id="b3" onclick="MarcarCartelaB(this)">13</td><!--B-->
         <td id="i3" onclick="MarcarCartelaI(this)">22</td><!--I-->
-        <td id="n3" onclick="MarcarCartela(this)">31</td><!--N-->
-        <td id="g3" onclick="MarcarCartela(this)">47</td><!--G-->
-        <td id="o3" onclick="MarcarCartela(this)">64</td><!--O-->
+        <td id="n3"><img src="img/meio da cartela.webp"/></td><!--N-->
+        <td id="g3" onclick="MarcarCartelaG(this)">47</td><!--G-->
+        <td id="o3" onclick="MarcarCartelaO(this)">64</td><!--O-->
       </tr>
       <tr>
         <td id="b4" onclick="MarcarCartelaB(this)">1</td><!--B-->
         <td id="i4" onclick="MarcarCartelaI(this)">16</td><!--I-->
-        <td id="n4" onclick="MarcarCartela(this)">34</td><!--N-->
-        <td id="g4" onclick="MarcarCartela(this)">49</td><!--G-->
-        <td id="o4" onclick="MarcarCartela(this)">71</td><!--O-->
+        <td id="n4" onclick="MarcarCartelaN(this)">34</td><!--N-->
+        <td id="g4" onclick="MarcarCartelaG(this)">49</td><!--G-->
+        <td id="o4" onclick="MarcarCartelaO(this)">71</td><!--O-->
       </tr>
       <tr>
         <td id="b5" onclick="MarcarCartelaB(this)">5</td><!--B-->
         <td id="i5" onclick="MarcarCartelaI(this)">19</td><!--I-->
-        <td id="n5" onclick="MarcarCartela(this)">32</td><!--N-->
-        <td id="g5" onclick="MarcarCartela(this)">52</td><!--G-->
-        <td id="o5" onclick="MarcarCartela(this)">70</td><!--O-->
+        <td id="n5" onclick="MarcarCartelaN(this)">32</td><!--N-->
+        <td id="g5" onclick="MarcarCartelaG(this)">52</td><!--G-->
+        <td id="o5" onclick="MarcarCartelaO(this)">70</td><!--O-->
       </tr>
     </tbody>
 
@@ -151,9 +154,7 @@
 
   <br />
 
-  <button onclick="GerarCartela()">
-    Gerar Cartela
-  </button>
+  
 
   <button onclick="NumeroSorteio()">
     Sortear o numero
@@ -169,22 +170,73 @@
     }
 
     function MarcarCartelaB(vetorB) {
-      if (vetorB.style.backgroundColor != 'black') {
-        vetorB.style.backgroundColor = 'pink';
-        vetorB.style.color = "white";
+      if (vetorB.style.backgroundColor != 'yellow') {
+        vetorB.style.backgroundColor = 'yellow'
+        vetorB.style.color = "white"
+        vetorB.style.webkitTextStrokeColor = "black";
+        vetorB.style.webkitTextStrokeWidth = "2px";
       } else {
-        vetorB.style.backgroundColor = '';
-        vetorB.style.color = "black";
+        vetorB.style.backgroundColor = ''
+        vetorB.style.color = 'black'
+        vetorB.style.webkitTextStrokeColor = '';
+        vetorB.style.webkitTextStrokeWidth = '';
+
       }
     }
 
     function MarcarCartelaI(vetorI) {
-      if (vetorI.style.backgroundColor != 'black') {
-        vetorI.style.backgroundColor = 'green';
-        vetorI.style.color = "white";
+      if (vetorI.style.backgroundColor != 'orange') {
+        vetorI.style.backgroundColor = 'orange'
+        vetorI.style.color = "white"
+        vetorI.style.webkitTextStrokeColor = "black";
+        vetorI.style.webkitTextStrokeWidth = "2px";
       } else {
-        vetorI.style.backgroundColor = '';
-        vetorI.style.color = "black";
+        vetorI.style.backgroundColor = ''
+        vetorI.style.color = "black"
+        vetorI.style.webkitTextStrokeColor = "";
+        vetorI.style.webkitTextStrokeWidth = "";
+      }
+    }
+
+    function MarcarCartelaN(vetorN) {
+      if (vetorN.style.backgroundColor != 'pink') {
+        vetorN.style.backgroundColor = 'pink'
+        vetorN.style.color = "white"
+        vetorN.style.webkitTextStrokeColor = "black";
+        vetorN.style.webkitTextStrokeWidth = "2px";
+      } else {
+        vetorN.style.backgroundColor = ''
+        vetorN.style.color = "black"
+        vetorN.style.webkitTextStrokeColor = "";
+        vetorN.style.webkitTextStrokeWidth = "";
+      }
+    }
+
+    function MarcarCartelaG(vetorG) {
+      if (vetorG.style.backgroundColor != 'purple') {
+        vetorG.style.backgroundColor = 'purple'
+        vetorG.style.color = "white"
+        vetorG.style.webkitTextStrokeColor = "black";
+        vetorG.style.webkitTextStrokeWidth = "2px";
+      } else {
+        vetorG.style.backgroundColor = ''
+        vetorG.style.color = "black"
+        vetorG.style.webkitTextStrokeColor = "";
+        vetorG.style.webkitTextStrokeWidth = "";
+      }
+    }
+
+    function MarcarCartelaO(vetorO) {
+      if (vetorO.style.backgroundColor != 'blue') {
+        vetorO.style.backgroundColor = 'blue'
+        vetorO.style.color = "white"
+        vetorO.style.webkitTextStrokeColor = "black";
+        vetorO.style.webkitTextStrokeWidth = "2px";
+      } else {
+        vetorO.style.backgroundColor = ''
+        vetorO.style.color = "black"
+        vetorO.style.webkitTextStrokeColor = "";
+        vetorO.style.webkitTextStrokeWidth = "";
       }
     }
 
@@ -217,21 +269,21 @@
       }
     }
 
-   function NumeroSorteio() {
-    if (sorteio.length == 0) { // Adiciona uma verificação para quando os números acabarem
+    function NumeroSorteio() {
+      if (sorteio.length == 0) { // Adiciona uma verificação para quando os números acabarem
         document.getElementById("display").innerHTML = "<h1>Todos os números foram sorteados!</h1>"
         return NumeroSorteio()
-    }
-    var numerosorteado = sorteio.shift() // Pega o primeiro e remove do array embaralhado
-    // Faz o número que foi sorteado aparecer na tela com formatação H1
-    document.getElementById("display").innerHTML = "<h1>Número sorteado: " + numerosorteado + "</h1>"
-    // Pega o elemento TD correspondente ao número sorteado na tabela grande
-    var numeroTabela = document.getElementById(numerosorteado)
-    
-    if (numeroTabela) { // Verifica se o elemento foi encontrado (o que deve acontecer agora!)
+      }
+      var numerosorteado = sorteio.shift() // Pega o primeiro e remove do array embaralhado
+      // Faz o número que foi sorteado aparecer na tela com formatação H1
+      document.getElementById("display").innerHTML = "<h1>Número sorteado: " + numerosorteado + "</h1>"
+      // Pega o elemento TD correspondente ao número sorteado na tabela grande
+      var numeroTabela = document.getElementById(numerosorteado)
+
+      if (numeroTabela) { // Verifica se o elemento foi encontrado (o que deve acontecer agora!)
         numeroTabela.style.backgroundColor = "lightgreen" // Pinta o fundo
-    } 
-}
+      }
+    }
 
     function GerarCartela() {
       vetorB = MisturarArray(GerarVetor(1, 15))
