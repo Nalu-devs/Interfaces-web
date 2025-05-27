@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <table class="tabela">
+  <table class="cartela">
     <thead>
       <tr>
         <th class="b">B</th>
@@ -21,43 +21,43 @@
     </thead>
     <tbody>
       <tr>
-        <td id="b1" onclick="MarcarCartela(this)"> 12 </td><!--B-->
-        <td id="i1" onclick="MarcarCartela(this)">30</td><!--I-->
+        <td id="b1" onclick="MarcarCartelaB(this)"> 12 </td><!--B-->
+        <td id="i1" onclick="MarcarCartelaI(this)">30</td><!--I-->
         <td id="n1" onclick="MarcarCartela(this)">33</td><!--N-->
         <td id="g1" onclick="MarcarCartela(this)">51</td><!--G-->
         <td id="o1" onclick="MarcarCartela(this)">69</td><!--O-->
       </tr>
       <tr>
-        <td id="b2" onclick="MarcarCartela(this)">9</td> <!--B-->
-        <td id="i2" onclick="MarcarCartela(this)">24</td><!--I-->
+        <td id="b2" onclick="MarcarCartelaB(this)">9</td> <!--B-->
+        <td id="i2" onclick="MarcarCartelaI(this)">24</td><!--I-->
         <td id="n2" onclick="MarcarCartela(this)">45</td><!--N-->
         <td id="g2" onclick="MarcarCartela(this)">59</td><!--G-->
         <td id="o2" onclick="MarcarCartela(this)">75</td><!--O-->
       </tr>
       <tr>
-        <td id="b3" onclick="MarcarCartela(this)">13</td><!--B-->
-        <td id="i3" onclick="MarcarCartela(this)">22</td><!--I-->
+        <td id="b3" onclick="MarcarCartelaB(this)">13</td><!--B-->
+        <td id="i3" onclick="MarcarCartelaI(this)">22</td><!--I-->
         <td id="n3" onclick="MarcarCartela(this)">31</td><!--N-->
         <td id="g3" onclick="MarcarCartela(this)">47</td><!--G-->
         <td id="o3" onclick="MarcarCartela(this)">64</td><!--O-->
       </tr>
       <tr>
-        <td id="b4" onclick="MarcarCartela(this)">1</td><!--B-->
-        <td id="i4" onclick="MarcarCartela(this)">16</td><!--I-->
+        <td id="b4" onclick="MarcarCartelaB(this)">1</td><!--B-->
+        <td id="i4" onclick="MarcarCartelaI(this)">16</td><!--I-->
         <td id="n4" onclick="MarcarCartela(this)">34</td><!--N-->
         <td id="g4" onclick="MarcarCartela(this)">49</td><!--G-->
         <td id="o4" onclick="MarcarCartela(this)">71</td><!--O-->
       </tr>
       <tr>
-        <td id="b5" onclick="MarcarCartela(this)">5</td><!--B-->
-        <td id="i5" onclick="MarcarCartela(this)">19</td><!--I-->
+        <td id="b5" onclick="MarcarCartelaB(this)">5</td><!--B-->
+        <td id="i5" onclick="MarcarCartelaI(this)">19</td><!--I-->
         <td id="n5" onclick="MarcarCartela(this)">32</td><!--N-->
         <td id="g5" onclick="MarcarCartela(this)">52</td><!--G-->
         <td id="o5" onclick="MarcarCartela(this)">70</td><!--O-->
       </tr>
     </tbody>
 
-  </table>
+  </table class="sorteios">
   <table>
     <tr>
       <td id="1">1</td>
@@ -168,13 +168,23 @@
       return vetor
     }
 
-    function MarcarCartela(td) {
-      if (td.style.backgroundColor != 'black') {
-        td.style.backgroundColor = 'black';
-        td.style.color = "white";
+    function MarcarCartelaB(vetorB) {
+      if (vetorB.style.backgroundColor != 'black') {
+        vetorB.style.backgroundColor = 'pink';
+        vetorB.style.color = "white";
       } else {
-        td.style.backgroundColor = '';
-        td.style.color = "black";
+        vetorB.style.backgroundColor = '';
+        vetorB.style.color = "black";
+      }
+    }
+
+    function MarcarCartelaI(vetorI) {
+      if (vetorI.style.backgroundColor != 'black') {
+        vetorI.style.backgroundColor = 'green';
+        vetorI.style.color = "white";
+      } else {
+        vetorI.style.backgroundColor = '';
+        vetorI.style.color = "black";
       }
     }
 
