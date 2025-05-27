@@ -146,8 +146,8 @@
     </tr>
   </table>
   <div id="display">
-  <h1>Testando se sorteia o numero</h1>
-</div>
+    <h1>Testando se sorteia o numero</h1>
+  </div>
 
   <br />
 
@@ -178,12 +178,6 @@
       }
     }
 
-    var sorteio = []
-    for (var i=1;i<=75;i++){
-      sorteio.push(i)//adiciona os numeros de 1 a 75
-    }
-    sorteio = MisturarArray(sorteio);//para que os numeros sejam embaralhados
-
     function MisturarArray(array) {
       var aleatorio
       var cont = array.length
@@ -198,6 +192,12 @@
       return array
     }
 
+    var sorteio = [];
+    for (var i = 1; i <= 75; i++) {
+      sorteio.push(i);
+    }
+    sorteio = MisturarArray(sorteio);
+
     function NumeroAleatorio(numeroMinimo, numeroMaximo) {
       var retorno = Math.floor(Math.random() * numeroMaximo)
       if (retorno > 0 && retorno >= numeroMinimo && retorno <= numeroMaximo) {
@@ -207,20 +207,12 @@
       }
     }
 
-    function NumeroSorteio() {
-      var numerosorteado = sorteio[0]//inicia a lista no vetor 0, porém como esta misturado não tem como saber qual numero começara
-       document.getElementById("display").innerHTML = numerosorteado//faz o numero que foi sorteado aparecer na tela
-      sorteio.shift()//shift remove o numero que foi sorteado para que não seja novamente
-
-      var elementoDoNumeroSorteado = document.getElementById(numerosorteado.toString())//tentei buscar o id de cada numero para não pintar todos (não estou conseguindo)
-      var elementoSorteado = numerosorteado
-      elementoSorteado.style.backgroundColor = "#000";
-
-      var numeroMarcadoCartela = numerosorteado
-      if (numeroMarcadoCartela != null) {
-        numeroMarcadoCartela.style.backgroundColor = "rgba(255,0,0,0.5)"
-      }
+   function NumeroSorteio() {
+    if (sorteio.length == 0) { // Adiciona uma verificação para quando os números acabarem
+        document.getElementById("display").innerHTML = "<h1>Todos os números foram sorteados!</h1>"
+        return NumeroSorteio()
     }
+}
 
     function GerarCartela() {
       vetorB = MisturarArray(GerarVetor(1, 15))
