@@ -16,7 +16,7 @@ html {
     font-size: 50px;
     padding: 5px 8px;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 td {
@@ -63,6 +63,20 @@ img {
     height: 40px;
 }
 
-button .gerarCartela {
-    margin: 0 auto;
+.botaoGerarCartela {
+    margin-top: 2%;
+    margin-left: 45%;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-image: linear-gradient(to top right, rgb(184, 37, 184), rgb(253, 106, 130));
+    color: white;
+    transition: 0.7s ;
+}
+
+.botaoGerarCartela:hover {
+    border-radius: 10px;
+    background-image: linear-gradient(to top right, rgb(253, 106, 130), rgb(184, 37, 184));
+
 }
