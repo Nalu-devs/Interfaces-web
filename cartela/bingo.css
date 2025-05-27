@@ -4,6 +4,7 @@ html {
     background-color: #d8f3dc;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -72,11 +73,24 @@ img {
     cursor: pointer;
     background-image: linear-gradient(to top right, rgb(184, 37, 184), rgb(253, 106, 130));
     color: white;
-    transition: 0.7s ;
+    transition: 0.7s;
 }
 
 .botaoGerarCartela:hover {
     border-radius: 10px;
     background-image: linear-gradient(to top right, rgb(253, 106, 130), rgb(184, 37, 184));
 
+}
+
+table {
+    margin-left: 8%;
+    margin-top: 3%;
+}
+
+.sorteios {
+    width: 70px;
+}
+
+h1{
+    margin-left: 10%;
 }
