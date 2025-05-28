@@ -1,17 +1,16 @@
 body,
 html {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #d8f3dc;
+    background-color: #bdbdbd;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
 
 .cartela {
-    background-color: #edede9;
+    background-color: #d6d5c8;
     border: 4px solid #000000;
     border-radius: 5%;
     font-size: 50px;
@@ -60,37 +59,79 @@ td {
 
 img {
     margin-top: 10px;
-    width: 40px;
-    height: 40px;
+    width: 70%;
+    height:40px;
 }
 
 .botaoGerarCartela {
     margin-top: 2%;
     margin-left: 45%;
-    font-size: 20px;
+    font-size: 1.4rem;
     border-radius: 5px;
     border: 1px solid black;
     cursor: pointer;
-    background-image: linear-gradient(to top right, rgb(184, 37, 184), rgb(253, 106, 130));
-    color: white;
+    background: linear-gradient(to right,
+            #FFFF99,
+            #FFCC99,
+            #FFB3C2,
+            #CC99FF,
+            #99CCFF);
+    color: rgb(0, 0, 0);
     transition: 0.7s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*sombra*/
 }
 
 .botaoGerarCartela:hover {
     border-radius: 10px;
-    background-image: linear-gradient(to top right, rgb(253, 106, 130), rgb(184, 37, 184));
-
+    background-color: #f06543;
 }
 
 table {
-    margin-left: 8%;
+    margin-left: 9%;
     margin-top: 3%;
 }
 
 .sorteios {
-    width: 70px;
+    width: 50px;
+    background-color: #d6d5c8;
 }
 
-h1{
-    margin-left: 10%;
+.alinhamento{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+      margin-top: 2%;
+      width: 100%;
+}
+#display{
+    min-width: 300px;
+    text-align: center;
+}
+
+h1 {
+    position: static;
+    white-space: nowrap; /*Para não quebrar de linha mesmo se o texto for grande*/
+}
+
+.botaoSorteiaNumero {
+    margin-left: 20px;
+    position: static;
+    font-size: 1.4rem;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: linear-gradient(to right,
+            #FFFF99,
+            /* Amarelo bem suave */
+            #FFCC99,
+            /* Laranja pêssego */
+            #FFB3C2,
+            /* Rosa claro */
+            #CC99FF,
+            /* Roxo lavanda */
+            #99CCFF);
+    /* Azul celeste */
+    color: rgb(0, 0, 0);
+    transition: 0.7s;
 }
