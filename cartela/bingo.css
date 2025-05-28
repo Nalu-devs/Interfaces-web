@@ -60,7 +60,7 @@ td {
 img {
     margin-top: 10px;
     width: 70%;
-    height:40px;
+    height: 40px;
 }
 
 .botaoGerarCartela {
@@ -78,7 +78,8 @@ img {
             #99CCFF);
     color: rgb(0, 0, 0);
     transition: 0.7s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*sombra*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*sombra*/
 }
 
 .botaoGerarCartela:hover {
@@ -96,21 +97,23 @@ table {
     background-color: #d6d5c8;
 }
 
-.alinhamento{
+.alinhamento {
     display: flex;
-     justify-content: center;
-     align-items: center;
-      margin-top: 2%;
-      width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    width: 100%;
 }
-#display{
+
+#display {
     min-width: 300px;
     text-align: center;
 }
 
 h1 {
     position: static;
-    white-space: nowrap; /*Para não quebrar de linha mesmo se o texto for grande*/
+    white-space: nowrap;
+    /*Para não quebrar de linha mesmo se o texto for grande*/
 }
 
 .botaoSorteiaNumero {
