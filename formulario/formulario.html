@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validar</title>
+</head>
+
+<body>
+    <form method="post" action="salvar.html" onsubmit="return validarFormulario()">
+        <!--O onsubmit declara que quando uma tag form sofrer um submit executa a função indicada nesse caso validarFormulario o return volta pra pagina do formulario-->
+        <label>Cep</label>
+        <input onkeydown="validarTexto()" type="text" name="cep" id="cep" class="campo" maxlength="8"><!--onkeydown é pra quando apertar qualquer tecla para baixo-->
+        <button onclick="Clicar()" type="button" id="teste">
+            Consultar CEP
+        </button>
+        <br><br>
+        <label>Endereço</label>
+        <input type="text" name="endereco" id="endereco" class="campo" />
+        <br><br>
+        <label>Número</label>
+        <input type="text" name="numero" id="numero" class="campo" />
+        <br><br>
+        <label>Bairro</label>
+        <input type="text" name="bairro" id="bairro" class="campo" />
+        <br><br>
+        <label>Cidade</label>
+        <input type="text" name="cidade" id="cidade" class="campo" />
+        <br><br>
+        <label>Estado</label>
+        <input type="text" name="estado" id="estado" class="campo" />
+        <br><br>
+        <button id="botao" class="botao" type="submit">
+            Enviar dados
+        </button>
+    </form>
+    <script>
+
+        function Clicar(){
+            var input = document.getElementById("cep")
+
+            var url = "https://viacep.com.br/ws/" + input.value + "/json/"
+            fetch(url)
+                .then(response => response.json())
+                .then(dados => {
+                    var cep = document.getElementById('cep')
+                    var endereco = document.getElementById('endereco')
+                    var numero = document.getElementById('numero')
+                    var bairro = document.getElementById('bairro')
+                    var cidade = document.getElementById('cidade')
+                    var estado = document.getElementById('estado')
+                    endereco.value = dados.logradouro
+                    bairro.value = dados.bairro
+                    cidade.value = dados.localidade
+                    estado.value = dados.estado
+                }
+                )
+                .catch(error => console.error('Erro:', error));
+        }
+
+        function validarFormulario() {
+            var cep = document.getElementById("cep")
+            var endereco = document.getElementById("endereco")
+            var numero = document.getElementById("numero")
+            var bairro = document.getElementById("bairro")
+            var cidade = document.getElementById("cidade")
+            var estado = document.getElementById("estado")
+
+            if (cep.value == "") { /*Se valor de cep ficar vazio aparece campo não preenchido*/
+                alert("Campo não preenchido")
+                cep.style.border='1px solid red'
+                return false; /*Não envia o formulario*/
+            }
+        }
+        
+        function validarTexto()
+            {
+                var cep = document.getElementById("cep")
+                console.log(cep.style.border)/*console.log é oq aparece no f12*/
+                if (cep.style.border!=""){/*Se a borda não for vazia*/
+                    cep.style.border=""/*ele deixa ela vazia*/
+                }
+
+            }
+    </script>
+</body>
+
+</html>
