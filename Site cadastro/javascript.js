@@ -1,8 +1,11 @@
+const API_URL = "https://localhost:8081/api/produtos.php";
+
 function todos(pesquisa = "") {
     let url = API_URL;
     if (pesquisa) {
         url += "?pesquisa=" + encodeURIComponent(pesquisa);
     }
+    const tbody = document.querySelector("#tabela tbody");
     fetch(url)
         .then(resposta => resposta.json())
         .then(dados => {
@@ -23,7 +26,7 @@ function todos(pesquisa = "") {
                 tbody.appendChild(tr);
             });
         })
-    const tbody = document.querySelector("#tabela tbody");
+    
     tbody.innerHTML = "";
 }
 
