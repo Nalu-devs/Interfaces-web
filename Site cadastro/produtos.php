@@ -6,7 +6,7 @@ header("Acess-Control-Allow_Methods: GET, POST, PUT, DELETE, OPTIONS");
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "api_video";
+$db = "produtos";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
@@ -24,23 +24,24 @@ switch($method){
             $pesquisa="%" .$_GET['pesquisa']."%";
 
             $stmt = $conn->prepare("SELECT * FROM produtos WHERE LOGIN LIKE ? OR NOME LIKE ?");
-            $stmt->bind_param("ss",$pesquisa, $pesquisa)
-            $stmt-execute();
+            $stmt->bind_param("ss",$pesquisa, $pesquisa);
+            $stmt->execute();
             $result=$stmt->get_result();
         }
         else{
             $result=$conn->query("SELECT * FROM produtos order by ID desc");
         }
             $retorno = [];
-        while($linha=result->fetch_assoc()){
+        while($linha= $result->fetch_assoc()){
             $retorno[]=$linha;
         }
         echo json_encode($retorno);
         break;
         case 'POST':
-            $data=json_decode(file_get_contents("php://iput"),true);
+            $data=json_decode(file_get_contents("php://input"),true);
             $stmt=$conn->prepare("INSERT INTO produtos (NOME, DESCRICAO, PRECO, ESTOQUE, ACAO) VALUES (?, ?, ?, ?, ?)");
-            $stmt->bind_param("ssssi",$data['NOME'], $data['DESCRICAO'], $data['PRECO'], $data['ESTOQUE'], $data['ACAO']);
+            //print_r($data);
+            $stmt->bind_param("ssssi",$data['NOME'], $data['DESCRICAO'], $data['VALOR'], $data['ESTOQUE'], $data['ACAO']);
             $stmt->execute();
             echo json_encode(["status"=>"ok","insert_id"=>$stmt->insert_id]);
             break;

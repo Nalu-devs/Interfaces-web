@@ -4,5 +4,6 @@ CREATE TABLE users(
     'DESCRICAO' varchar(550) NOT NULL,
     'PRECO' varchar(150) NOT NULL,
     'ESTOQUE' varchar(20) NOT NULL,
-    'ACAO' boolean
+    'ACAO' boolean,
+    'MUDAR' boolean
 )
