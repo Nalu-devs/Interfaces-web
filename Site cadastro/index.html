@@ -139,8 +139,8 @@
           </svg>
         </span>
       </div>
-      <button class="btn btn-outline-primary ms-2" type="submit" style="height: 40px;">Salvar</button>
-      <button class="btn btn-outline-primary ms-2" type="submit" style="height: 40px;">Cancelar</button>
+      <button onclick="salvar()" class="btn btn-outline-primary ms-2" type="submit" style="height: 40px;">Salvar</button>
+      <button onclick="cancelar()" class="btn btn-outline-primary ms-2" type="submit" style="height: 40px;">Cancelar</button>
     </form>
 
     <form class="d-flex" role="search">
@@ -170,8 +170,8 @@
           </svg>
         </span>
       </div>
-      <button class="btn btn-outline-primary ms-2" type="submit">Pesquisar</button>
-      <button class="btn btn-outline-primary ms-2" type="submit">Listar todos</button>
+      <button onclick="pesquisar()" class="btn btn-outline-primary ms-2" type="submit">Pesquisar</button>
+      <button onclick="todos()" class="btn btn-outline-primary ms-2" type="submit">Listar todos</button>
     </form>
 
     <table class="table">
@@ -185,32 +185,7 @@
           <th scope="col">Ações</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
+      <tbody></tbody>
     </table>
   </div>
 </body>
