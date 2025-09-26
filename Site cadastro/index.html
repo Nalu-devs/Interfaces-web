@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Controle de estoque</title>
   <script defer src="bootstrap.js"></script>
+  <script src="javascript.js"></script>
 
 </head>
 
@@ -170,19 +171,19 @@
           </svg>
         </span>
       </div>
-      <button onclick="pesquisar()" class="btn btn-outline-primary ms-2" type="submit">Pesquisar</button>
+      <button id="pesquisar" onclick="pesquisar()" class="btn btn-outline-primary ms-2" type="submit">Pesquisar</button>
       <button onclick="todos()" class="btn btn-outline-primary ms-2" type="submit">Listar todos</button>
     </form>
 
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Descrição</th>
-          <th scope="col">Preço</th>
-          <th scope="col">Estoque</th>
-          <th scope="col">Ações</th>
+          <th scope="col" id="id">ID</th>
+          <th scope="col" id="nome">Nome</th>
+          <th scope="col" id="descricao">Descrição</th>
+          <th scope="col" id="preco">Preço</th>
+          <th scope="col" id="estoque">Estoque</th>
+          <th scope="col" id="acao">Ações</th>
         </tr>
       </thead>
       <tbody></tbody>
