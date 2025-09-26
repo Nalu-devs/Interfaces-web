@@ -9,12 +9,6 @@
   <title>Controle de estoque</title>
   <script defer src="bootstrap.js"></script>
 
-  <!-- <style>
-    div {
-      border: 1px solid;
-    }
-  </style> -->
-
 </head>
 
 <body>
@@ -24,8 +18,11 @@
 
     <form class="d-flex" role="search">
       <div class="input-group" style="width: 14.2%;">
-        <span class="spans" style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
-          <svg width="30px" height="30px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <input type="text" class="form-control" placeholder="Produto" aria-label="Produto"
+          aria-describedby="basic-addon1" style="border-radius: 10px;">
+        <span style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
+          <svg class="input-icon" width="30px" height="30px" viewBox="0 0 24.00 24.00" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -36,13 +33,13 @@
             </g>
           </svg>
         </span>
-        <input type="text" class="form-control" placeholder="Produto" aria-label="Produto"
-          aria-describedby="basic-addon1">
       </div>
 
       <div class="input-group" style="width: 14.2%;">
-        <span class="spans" style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
-          <svg width="30px" height="30px" viewBox="0 0 24 24" version="1.1" xml:space="preserve"
+        <input type="text" class="form-control" placeholder="Descrição" aria-label="Descrição"
+          aria-describedby="basic-addon1" style="border-radius: 10px;">
+        <span style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
+          <svg class="input-icon" width="30px" height="30px" viewBox="0 0 24 24" version="1.1" xml:space="preserve"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
@@ -71,13 +68,15 @@
             </g>
           </svg>
         </span>
-        <input type="text" class="form-control" placeholder="Descrição" aria-label="Descrição"
-          aria-describedby="basic-addon1">
       </div>
 
       <div class="input-group" style="width: 14.2%;">
-        <span class="spans" style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
-          <svg width="30px" height="30px" fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <input type="number" class="form-control" id="valor" name="valor" step="0.01" min="0" placeholder="0.00"
+          aria-label="Preço" aria-describedby="basic-addon1" style="border-radius: 10px;">
+        <span
+          style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
+          <svg class="input-icon" width="30px" height="30px" fill="#000000" viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -94,13 +93,15 @@
             </g>
           </svg>
         </span>
-        <input type="number" class="form-control" id="valor" name="valor" step="0.01" min="0" placeholder="0.00"
-          aria-label="Preço" aria-describedby="basic-addon1">
+
       </div>
 
-      <div class="input-group" style="width: 14.2%;">
-        <span class="spans" style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
-          <svg width="30px" height="30px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="input-group" style="width: 20%;">
+        <input type="number" class="form-control" name="estoque" min="0" placeholder="Quantidade em estoque"
+          aria-label="Estoque" aria-describedby="basic-addon1" style="border-radius: 10px;">
+        <span
+          style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
+          <svg class="input-icon" width="30px" height="30px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -116,13 +117,17 @@
             </g>
           </svg>
         </span>
-        <input type="number" class="form-control" name="estoque" min="0" placeholder="Quantidade em estoque"
-          aria-label="Estoque" aria-describedby="basic-addon1">
       </div>
 
-      <div class="input-group" style="width:14.2%; height: 50px;">
-        <span class="spans" style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
-          <svg width="30px" height="30px" viewBox="0 0 25.00 25.00" fill="none" xmlns="http://www.w3.org/2000/svg"
+      <div class="input-group" style="width:20%; height: 50px;">
+        <select class="form-select" id="inputGroupSelect01" style="height: 40px; border-radius: 10px;">
+          <option selected>Escolha</option>
+          <option value="1">Comprar</option>
+          <option value="2">Não Comprar</option>
+        </select>
+        <span
+          style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
+          <svg class="input-icon" width="30px" height="30px" viewBox="0 0 25.00 25.00" fill="none" xmlns="http://www.w3.org/2000/svg"
             stroke="#000000" stroke-width="0.00025">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -133,20 +138,18 @@
             </g>
           </svg>
         </span>
-        <select class="form-select" id="inputGroupSelect01" style="display: block; height: 40px;">
-          <option selected>Escolha</option>
-          <option value="1">Comprar</option>
-          <option value="2">Não Comprar</option>
-        </select>
       </div>
       <button class="btn btn-outline-primary ms-2" type="submit" style="height: 40px;">Salvar</button>
       <button class="btn btn-outline-primary ms-2" type="submit" style="height: 40px;">Cancelar</button>
     </form>
 
     <form class="d-flex" role="search">
-      <div class="input-group" style="width:40%;">
-        <span class="spans" style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
-          <svg  width="30px" height="30px" viewBox="0 -0.5 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      <div class="input-group" style="width:43.7%;">
+        <input type="search" class="form-control" placeholder="Pesquisar" aria-label="Search"
+          aria-describedby="basic-addon1" style="border-radius: 10px;">
+        <span
+          style="align-items: center; justify-content: center ; display: flex; margin: 0 10px 0 10px;">
+          <svg class="input-icon" width="30px" height="30px" viewBox="0 -0.5 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -166,8 +169,6 @@
             </g>
           </svg>
         </span>
-        <input type="search" class="form-control" placeholder="Pesquisar" aria-label="Search"
-          aria-describedby="basic-addon1">
       </div>
       <button class="btn btn-outline-primary ms-2" type="submit">Pesquisar</button>
       <button class="btn btn-outline-primary ms-2" type="submit">Listar todos</button>
