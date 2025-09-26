@@ -1,41 +1,42 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px;
 }
 
 input,
 button,
-select{
+select {
     margin: 5px;
     padding: 5px;
 }
 
-table{
-    border-collapse: collapse; /*esconde a borda*/
+table {
+    border-collapse: collapse;
+    /*esconde a borda*/
     width: 100%;
     margin-top: 20px;
 }
 
 th,
-td{
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 
 }
 
-th{
+th {
     background-color: gray;
 }
 
-.geral{
+.geral {
     margin: 1%;
 }
 
-.fs-1{
+.fs-1 {
     margin: 20px 0 10px 10px;
 }
 
-.input-group{
+.input-group {
     margin: 0 20px 0 20px;
 }
